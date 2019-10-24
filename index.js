@@ -2,6 +2,9 @@ const express = require('express');
 const app = express()
 require('./db/db')
 
+const usersController = require('./controllers/users.js')
+app.use('/users', usersController)
+
 
 app.get('/', (req, res, next) => {
 	try {
